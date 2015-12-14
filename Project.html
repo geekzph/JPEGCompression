@@ -1,0 +1,923 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>Final Project&nbsp;&nbsp;&nbsp; Video frames compression using Matlab</title>
+<style>
+<!--
+.font0
+	{color:windowtext;
+	font-size:12.0pt;
+	font-weight:400;
+	font-style:normal;
+	text-decoration:none;
+	font-family:宋体;
+	}
+-->
+</style>
+</head>
+
+<body>
+<hr>
+<h2 align="center"><font face="Monotype Corsiva" size="6" color="#003300">Final 
+Project&nbsp;&nbsp;&nbsp; Video Frames Compression Using Matlab</font></h1>
+<hr>
+<p></p>
+<p>
+
+<font face="Algerian" color="#006600"> 
+
+<b><font size="4">Announcement</font></b></font></body><font face="Algerian" size="4" color="#006600">s</font></p>
+<p>
+<font size="4" color="#0000FF"><b>Mar 30</b></font><b><font color="#0000FF"><font size="4">,&nbsp; 
+2009</font>&nbsp;&nbsp;&nbsp; 
+The requirement of final project is available.</font></b></p>
+<font face="Century Schoolbook">
+<hr>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+<font face="Algerian" size="4" color="#006600">
+
+
+
+
+
+
+
+<p> 
+
+<b>General information</b></p>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+<font face="Century Schoolbook">
+<font face="Times New Roman">
+
+<p> 
+
+1. The final project of this course is to design and implement image compression 
+techniques using Matlab.</p>
+
+<p> 
+
+2. The deadline of the final project is Tue Dec. 28 at 23:59.</p>
+
+<p> 
+
+3. The final project is the group work with 1 ~ 4 person(s) each group. The 
+group members have the same scores for the final project.</p>
+
+<p> 
+
+4. Final project is 20% of the assessment of this course.
+</p>
+
+</font>
+
+<hr>
+
+
+
+
+
+
+
+<font face="Algerian" size="4" color="#006600">
+
+
+
+
+
+
+
+<p> 
+
+<b>Requirements</b></font></p>
+
+<font face="Century Schoolbook">
+
+<font face="Times New Roman">
+
+<p> 
+
+1. Download the files below to the same local folder.</p>
+
+<ul>
+  <li><a href="Image1.bmp">Image1.bmp</a>, <a href="Image2.bmp">Image2.bmp</a>, 
+  <a href="Image3.bmp">Image3.bmp</a>, <a href="Image4.bmp">Image4.bmp</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  test data</li>
+  <li><a href="CalMSE.m">CalMSE.m</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; evaluate the quality of the recovered images&nbsp; </li>
+  <li><a href="Compratio.m">Compratio.m</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; evaluate the compression ratio of the compressed file </li>
+  <li><a href="Compress.m">Compress.m</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; compress the original images to the compressed file</li>
+  <li><a href="Decompress.m">Decompress.m</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; decompress the compressed file to the recovered images</li>
+  <li><a href="imdisplay.m">imdisplay.m</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; display the image</li>
+  <li><a href="main.m">main.m</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; main function of the project</li>
+</ul>
+
+<p> 
+
+2. You are required to implement image compression and decompression by 
+modifying the two functions: <a href="Compress.m">Compress.m</a> and
+<a href="Decompress.m">Decompress.m.</a></p>
+
+<p> 
+
+3. Submit the two functions to TA by email
+<a href="mailto:csygliu@comp.polyu.edu.hk">csygliu@comp.polyu.edu.hk</a> before 
+the deadline</p>
+
+<p> 
+
+4. Don't make any modification to the other files except <a href="Compress.m">Compress.m</a> and
+<a href="Decompress.m">Decompress.m.</a></p>
+
+</font>
+
+<hr>
+
+
+
+
+
+
+
+<p> 
+
+<font face="Algerian" size="4" color="#006600">
+<b>Submission</b></p>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+<font face="Times New Roman">
+
+<p> 
+
+1. Submit <a href="Compress.m">Compress.m </a>and <a href="Decompress.m">Decompress.m</a> 
+to TA by email: <a href="mailto:csygliu@comp.polyu.edu.hk">
+csygliu@comp.polyu.edu.hk</a> before Tue Apr. 28 at 23:59.
+</p>
+
+<p> 
+
+2. Penalty for late submission</p>
+
+<ul>
+  <li>Wed Apr 29 00:00 - 23:59&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+  25% deduction</li>
+  <li>Tur Apr 30 00:00 - 23:59&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50% deduction</li>
+  <li>Fri May 1 00:00 - 23:59&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 75% deduction</li>
+  <li>After May 2 23:59&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Zero point</li>
+</ul>
+
+<p> 
+
+3. Don't submit any other help functions, images and files.</p>
+
+</font>
+
+<hr>
+
+
+
+
+
+
+
+<font face="Algerian" size="4" color="#006600">
+
+
+
+
+
+
+
+<p> 
+
+<b>grading schemes</b></p>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+<font face="Times New Roman">
+
+<p> 
+
+The final project is totally 100 points. Your implementation is evaluated from 
+three aspects:
+</p>
+
+<font face="Century Schoolbook">
+
+
+
+
+
+
+
+<font face="Times New Roman">
+
+<p> 
+
+1. 40 points for the compression ratio between the original images and the 
+compressed file. </p>
+
+<p> 
+
+&nbsp;&nbsp;&nbsp; If the compression ratio is equal or smaller than 1, you will 
+get zero point for the final project. </p>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+<p> 
+
+2. 40 points for the quality of the recovered images.</p>
+
+<dt>&nbsp;&nbsp;&nbsp; 20 Points:&nbsp;&nbsp;&nbsp; Objective evaluation of the 
+image quality by calculate the MSE between the original images and the recovered 
+images.</dt>
+<dt>&nbsp;&nbsp;&nbsp; 20 Points:&nbsp;&nbsp;&nbsp; Subjective evaluation of the 
+image quality by the observation of the TA.&nbsp;&nbsp;&nbsp; </dt>
+
+
+
+
+
+
+
+<font face="Times New Roman">
+
+<font face="Century Schoolbook">
+
+
+
+
+
+
+
+<font face="Times New Roman">
+
+<p> 
+
+3. 10 points for the running time of the compression and decompression 
+algorithms.</p>
+
+<p> 
+
+4. 10 points for the quality of robustness of the compression and decompression 
+techniques by evaluating on the unknown four images.</p>
+
+<p> 
+
+　</p>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+<font face="Century Schoolbook">
+
+<hr>
+
+
+
+
+
+
+
+<font face="Algerian" size="4" color="#006600">
+
+
+
+
+
+
+
+<p> 
+
+<b>Friendly reminder</b></p>
+
+
+
+
+
+
+
+</font>
+
+<font face="Times New Roman">
+
+<p> 
+
+1. Don't miss the submission deadline.</p>
+
+<p> 
+
+2. The components in the matrixes orig_image, comp_image and reco_image should 
+be the integers.</p>
+
+<p> 
+
+3. The size of the reco_image should be same with the size of orig_image.</p>
+
+
+
+
+
+
+
+<font face="Times New Roman">
+
+<font face="Times New Roman">
+
+<p> 
+
+4. Don't make any modification of the provided functions expect
+<a href="Compress.m">Compress.m </a>and<a href="Decompress.m"> Decompress.m</a>.</p>
+
+<p> 
+
+5. Don't read the image file when you modify <a href="Compress.m">Compress.m </a>and<a href="Decompress.m"> Decompress.m</a>, 
+otherwise, you will get zero point in the final project.</p>
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+<p> 
+
+6. The compression ratio should larger than 1,
+
+<font face="Century Schoolbook">
+
+
+
+
+
+
+
+<font face="Times New Roman">
+
+
+
+
+
+
+
+<font face="Century Schoolbook">
+
+
+
+
+
+
+
+<font face="Times New Roman">
+
+otherwise, you will get zero point in the final project.</font></font></font></font></p>
+
+
+
+
+
+
+</font>
+
+
+
+
+
+<hr>
+
+
+
+
+
+
+
+<font face="Algerian" size="4" color="#006600">
+
+
+
+
+
+
+
+<p> 
+
+<b>Sample output and grading</b></p>
+
+
+
+
+
+
+
+<p> 
+
+</font>
+
+
+
+
+
+
+
+<font face="Times New Roman">
+
+
+
+
+
+
+
+<font face="Times New Roman">
+
+
+
+
+
+
+
+<font size="4">
+
+Example 1</font></font></font></p>
+
+
+
+
+
+
+
+<p> 
+
+The compression ratio is = 1.00, The MSE is = 0.00, The running time is = 0.16</p>
+
+
+
+
+
+
+
+<p> 
+
+<img border="0" src="Projec1.jpg" width="560" height="420"></p>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+<p> 
+
+
+
+
+
+
+
+<font face="Times New Roman" size="4">
+
+Example 2</font></p>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+<p> 
+
+The compression ratio is = 2.30, The MSE is = 21.58, The running time is = 0.47</p>
+
+
+
+
+
+
+
+<font face="Times New Roman">
+
+
+
+
+
+
+
+<font face="Times New Roman">
+
+<font face="Century Schoolbook">
+
+
+
+
+
+
+
+<p> 
+
+<img border="0" src="Projec2.jpg" width="560" height="420"></p>
+
+
+
+
+
+
+
+<p> 
+
+
+
+
+
+
+
+<font face="Times New Roman" size="4">
+
+Example 3</font></p>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+<p> 
+
+The compression ratio is = 4.01, The MSE is = 2171.49, The running time is = 
+0.23</p>
+
+
+
+
+
+
+
+<font face="Times New Roman">
+
+
+
+
+
+
+
+<font face="Times New Roman">
+
+<font face="Century Schoolbook">
+
+
+
+
+
+
+
+<p> 
+
+<img border="0" src="Projec3.jpg" width="560" height="420"></p>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+<p> 
+
+<b><font face="Times New Roman" size="4">Sample grading</font></b></p>
+
+
+
+
+
+
+
+<table x:str border="0" cellpadding="0" cellspacing="0" width="771" style="border-collapse:
+ collapse;width:580pt">
+  <colgroup>
+    <col width="101" style="width: 76pt"><col width="133" style="width: 100pt">
+    <col width="69" span="2" style="width: 52pt">
+    <col width="133" span="3" style="width: 100pt">
+  </colgroup>
+  <tr height="19" style="height:14.25pt">
+    <td height="19" width="101" style="height: 14.25pt; width: 76pt; font-weight: 700; text-align: center; color: windowtext; font-size: 12.0pt; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: medium none; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    　</td>
+    <td width="133" style="width: 100pt; font-weight: 700; text-align: center; color: windowtext; font-size: 12.0pt; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    Compression</td>
+    <td colspan="2" width="138" style="width: 104pt; font-weight: 700; text-align: center; color: windowtext; font-size: 12.0pt; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    Quality (40)</td>
+    <td width="133" style="width: 100pt; font-weight: 700; text-align: center; color: windowtext; font-size: 12.0pt; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" x:str="Running ">
+    Running&nbsp;</td>
+    <td width="133" style="width: 100pt; font-weight: 700; text-align: center; color: windowtext; font-size: 12.0pt; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    Robustness</td>
+    <td width="133" style="width: 100pt; font-weight: 700; text-align: center; color: windowtext; font-size: 12.0pt; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: .5pt solid windowtext; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" x:str="Total ">
+    Total&nbsp;</td>
+  </tr>
+  <tr height="19" style="height:14.25pt">
+    <td height="19" style="height: 14.25pt; font-weight: 700; text-align: center; color: windowtext; font-size: 12.0pt; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    　</td>
+    <td style="font-weight: 700; text-align: center; color: windowtext; font-size: 12.0pt; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    Ratio (40)</td>
+    <td style="font-weight: 700; text-align: center; color: windowtext; font-size: 12.0pt; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt dotted windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px" x:str="Obj. ">
+    Obj.&nbsp;</td>
+    <td style="font-weight: 700; text-align: center; color: windowtext; font-size: 12.0pt; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    Sub.</td>
+    <td style="font-weight: 700; text-align: center; color: windowtext; font-size: 12.0pt; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    Time (10)</td>
+    <td style="font-weight: 700; text-align: center; color: windowtext; font-size: 12.0pt; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    (10)</td>
+    <td style="font-weight: 700; text-align: center; color: windowtext; font-size: 12.0pt; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    (100)</td>
+  </tr>
+  <tr height="19" style="height:14.25pt">
+    <td height="19" style="height: 14.25pt; font-weight: 700; text-align: center; color: windowtext; font-size: 12.0pt; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    Example 1</td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    -------</td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt dotted windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    ----</td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    ----</td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    -------</td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    -------</td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    0</td>
+  </tr>
+  <tr height="19" style="height:14.25pt">
+    <td height="19" style="height: 14.25pt; font-weight: 700; text-align: center; color: windowtext; font-size: 12.0pt; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    Example 2</td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    1<font class="font0">2</font></td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt dotted windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    18</td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    12</td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    1<font class="font0">0</font></td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    4</td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    56</td>
+  </tr>
+  <tr height="19" style="height:14.25pt">
+    <td height="19" style="height: 14.25pt; font-weight: 700; text-align: center; color: windowtext; font-size: 12.0pt; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: .5pt solid windowtext; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    Example 3</td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    2<font class="font0">0</font></td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt dotted windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    2</td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    10</td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    1<font class="font0">0</font></td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    3</td>
+    <td style="text-align: center; color: windowtext; font-size: 12.0pt; font-weight: 400; font-style: normal; text-decoration: none; font-family: 宋体; vertical-align: middle; white-space: nowrap; border-left: medium none; border-right: .5pt solid windowtext; border-top: medium none; border-bottom: .5pt solid windowtext; padding-left: 1px; padding-right: 1px; padding-top: 1px">
+    43</td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+<p> 
+
+　</p>
+
+
+
+
+
+
+
+<font face="Century Schoolbook">
+
+
+
+
+
+
+
+<hr>
+
+
+
+
+
+
+
+</font>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
